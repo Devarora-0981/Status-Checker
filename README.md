@@ -1,4 +1,4 @@
-<h1 align= center> Powerful_BotStatus-TeLeTiPs</h1>
+<h1 align= center> Powerful Bot Status</h1>
 <h3 align = center>Easy & powerful bot to check if your all Telegram bots are working or not. This bot status bot refreshes automatically & runs for 24x7 hours.</h3>
 <p align="center">
 <a href="https://python.org"><img src="http://forthebadge.com/images/badges/made-with-python.svg" alt="made-with-python"></a>
@@ -32,18 +32,11 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
     
 ## Credits
+- [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
 - [TeLe TiPs](https://github.com/teletips)
 - [Thakshaka](https://t.me/thakshakar)
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
 
-## Warning
 
-- Changing the code is NOT ALLOWED!!    
-- You are free to use this code in any of your projects, but you MUST include the following in your README.md (Copy & paste)
-
-```
-##Credits
-- [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
-```
 ## License: 
 [GNU Affero General Public License v3.0](https://github.com/teletips/Powerful_BotStatus-TeLeTiPs/blob/main/LICENSE)
