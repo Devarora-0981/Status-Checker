@@ -32,7 +32,7 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
     
 ## Credits
-- [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
+- [BotStatus Telegram bot by TeLe TiPs](https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
 - [TeLe TiPs](https://github.com/teletips)
 - [Thakshaka](https://t.me/thakshakar)
 - [Pyrogram](https://github.com/pyrogram/pyrogram)
