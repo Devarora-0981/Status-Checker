@@ -43,14 +43,14 @@ async def main_teletips():
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
                                     await app.join_chat("Devbotz")
-                                    await app.join_chat({GRP_USN})
+                                    await app.join_chat(GRP_USN)
                                     await app.join_chat("We_rfriends")
                                     await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
                             await app.join_chat("Devbotz")
-                            await app.join_chat({GRP_USN})
+                            await app.join_chat(GRP_USN)
                         else:
                             xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Online** ✅"
                             await app.read_chat_history(bot)
