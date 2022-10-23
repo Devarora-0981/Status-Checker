@@ -29,7 +29,7 @@ async def main_teletips():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"<u>**🏷 Welcome To Dev Bots' Information Channel.**</u> \n\n📈 | <u>**Real-Time Bot Status**</u>"
+                xxx_teletips = f"<u>**🏷 Welcome ** </u>/n/n📈 | <u>**Real-Time Bot Status**</u>"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -45,12 +45,11 @@ async def main_teletips():
                                     await app.join_chat("Devbotz")
                                     await app.join_chat(GRP_ID)
                                     await app.join_chat("We_rfriends")
-                                    await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
+                                    await app.send_message(int(BOT_ADMIN_IDS), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
                             await app.join_chat("Devbotz")
-                            await app.join_chat(GRP_ID)
                         else:
                             xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Online** ✅"
                             await app.read_chat_history(bot)
