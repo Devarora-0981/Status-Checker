@@ -19,6 +19,10 @@
             "description": "Get from my.telegram.org/apps",
             "required": true
         },
+        "GRP_USN": {
+            "description": Your Group Username Without @ Where It Will Send The Offline Bots."
+            "required": true
+        }, 
         "SESSION_STRING": {
             "description": "A valid Pyrogram session string",
             "required": true
@@ -38,6 +42,7 @@
         "GRP_ID": {
             "description": Your Group Id (Example: -100123456)"
             "required": true
+        },
         "BOT_ADMIN_IDS": {
             "description": "Bot admin(s) id(s) (Example: 1357907531 2468097531 3579864213)"
         },
