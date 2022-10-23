@@ -22,7 +22,7 @@ BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
 MESSAGE_ID = int(os.environ["MESSAGE_ID"])
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
-GRP_ID = int(os.environ.get["GRP_ID"])
+GRP_ID = os.environ.get("GRP_ID")
 
 async def main_teletips():
     async with app:
