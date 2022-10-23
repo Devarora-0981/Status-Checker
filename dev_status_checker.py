@@ -41,6 +41,8 @@ async def main_teletips():
                             xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Offline** ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
+                                    await app.join_chat("Devbotz")
+                                    await app.join_chat("We_rfriends")
                                     await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
