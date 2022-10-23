@@ -1,8 +1,7 @@
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
+#Copyright ©️ 2022 Dev Arora. All Rights Reserved
 #You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-# ##Credits - [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
+#Credits - [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
 
-# Changing the code is not allowed! Read GNU AFFERO GENERAL PUBLIC LICENSE: https://github.com/teletips/Powerful_BotStatus-TeLeTiPs/blob/main/LICENSE
 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
@@ -22,14 +21,13 @@ BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
 MESSAGE_ID = int(os.environ["MESSAGE_ID"])
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
-GRP_ID = os.environ.get("GRP_ID")
-GRP_USN = os.environ.get("GRP_USN")
+
 
 async def main_teletips():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"<u>**🏷 Welcome To DevBots' Information Channel**</u>/n/n📈 | <u>**Real-Time Bot Status**</u>"
+                xxx_teletips = f"<u>**🏷 Welcome**</u>/n/n📈 | <u>**Real-Time Bot Status**</u>"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -42,14 +40,11 @@ async def main_teletips():
                             xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Offline** ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.join_chat(f"{GRP_USN}")
+                                    await app.send_message(int(BOT_ADMIN_IDS), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                     await app.join_chat("Devbotz")
-                                    await app.join_chat("We_rfriends")
-                                    await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
-                            await app.join_chat("Devbotz")
                         else:
                             xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Online** ✅"
                             await app.read_chat_history(bot)
@@ -64,4 +59,4 @@ async def main_teletips():
                         
 app.run(main_teletips())
 
-#Copyright ©️ 2021 TeLe TiPs. All Rights Reserved
+#Copyright ©️ 2022 Dev Arora. All Rights Reserved.
