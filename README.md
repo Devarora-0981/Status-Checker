@@ -19,7 +19,6 @@
 ## Credits
 - [TeLe TiPs](https://github.com/teletips)
 ## License: 
-[GNU Affero General Public License v3.0](https://github.com/Devarora-0981/Status-Checker
-/blob/main/LICENSE)
+[GNU Affero General Public License v3.0](https://github.com/Devarora-0981/Status-Checker/blob/main/LICENSE)
 
 <img src="https://user-images.githubusercontent.com/73097560/115834477-dbab4500-a447-11eb-908a-139a6edaec5c.gif">
