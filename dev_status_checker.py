@@ -1,7 +1,4 @@
-#Copyright ©️ 2022 Dev Arora. All Rights Reserved
-#You are free to use this code in any of your project, but you MUST include the following in your README.md (Copy & paste)
-#Credits - [BotStatus Telegram bot by TeLe TiPs] (https://github.com/teletips/Powerful_BotStatus-TeLeTiPs)
-
+#Copyright ©️ 2022 Dev Arora. All Rights Reserved.
 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
@@ -11,7 +8,7 @@ import pytz
 import os
 
 app = Client(
-    name = "botstatus_teletips",
+    name = "devbotz",
     api_id = int(os.environ["API_ID"]),
     api_hash = os.environ["API_HASH"],
     session_string = os.environ["SESSION_STRING"]
@@ -25,11 +22,11 @@ BOT_NAME = [i.strip() for i in os.environ.get("BOT_NAME").split(' ')]
 GRP_ID = os.environ.get("GRP_ID", "-1001437960289")
 
 
-async def main_teletips():
+async def main_devchecker():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"<u>**🏷 Welcome**</u>\n\n 📈 | <u>**Real-Time Bot Status**</u>"
+                xxx_teletips = f"<u>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴅᴇᴠ ʙᴏᴛs' ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</u>\n\n 📈 | <u>**ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs 🍂**</u>"
                 for bot in BOT_LIST:
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
@@ -39,15 +36,15 @@ async def main_teletips():
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n╭⎋  **app.get_users(bot, limit = 1)**\n╰⊚ **Offline** ❌"
+                            xxx_teletips += f"\n\n╭⎋  **@{bot}**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
+                                    await app.send_message(int(GRP_ID), f"**ʙsᴅᴋ ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡.\n@{bot} ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
                         else:
-                            xxx_teletips += f"\n\n╭⎋ **app.get_users(bot, limit = 1)**\n╰⊚ **Online** ✅"
+                            xxx_teletips += f"\n\n╭⎋ **@{bot}**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
                             await app.read_chat_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
@@ -58,6 +55,6 @@ async def main_teletips():
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
                         
-app.run(main_teletips())
+app.run(main_devchecker())
 
 #Copyright ©️ 2022 Dev Arora. All Rights Reserved.
