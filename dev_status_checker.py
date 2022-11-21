@@ -39,7 +39,7 @@ async def main_devchecker():
                             xxx_teletips += f"\n\n╭⎋  **@{bot}**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(GRP_ID), f"**ʙsᴅᴋ ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡.\n@{bot} ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.")
+                                    await app.send_message(int(GRP_ID), f"**ʙsᴅᴋ ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡.\n@{bot} ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
@@ -50,7 +50,7 @@ async def main_devchecker():
                         await asyncio.sleep(e.x)            
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y at %I:%M %p")
-                xxx_teletips += f"\n\n✔️ <u>Last checked on:</u>\n**Date & Time: {last_update}**\n**Time Zone: ({TIME_ZONE})**\n\n<i><u>♻️ Refreshes automatically within 10 minutes.</u></i>"
+                xxx_teletips += f"\n\n✔️ <u>ʟᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ:</u>\n**ᴅᴀᴛᴇ & ᴛɪᴍᴇ: {last_update}**\n**ᴛɪᴍᴇ ᴢᴏɴᴇ: ({TIME_ZONE})**\n\n<i><u>♻️ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 10 ᴍɪɴᴜᴛᴇs.</u></i>"
                 await app.edit_message_text(int(CHANNEL_OR_GROUP_ID), MESSAGE_ID, xxx_teletips)
                 print(f"Last checked on: {last_update}")                
                 await asyncio.sleep(600)
