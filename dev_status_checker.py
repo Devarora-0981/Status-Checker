@@ -21,6 +21,8 @@ BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
 MESSAGE_ID = int(os.environ["MESSAGE_ID"])
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
+BOT_NAME = [i.strip() for i in os.environ.get("BOT_NAME").split(' ')]
+GRP_ID = os.environ.get("GRP_ID", "-1001437960289")
 
 
 async def main_teletips():
@@ -32,21 +34,20 @@ async def main_teletips():
                     try:
                         yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
-                        await asyncio.sleep(10)
+                        await asyncio.sleep(15)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Offline** ❌"
+                            xxx_teletips += f"\n\n╭⎋  **[{BOT_NAME}]({https://t.me/{bot}?start=true)**\n╰⊚ **Offline** ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(BOT_ADMIN_IDS), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
-                                    await app.join_chat("Devbotz")
+                                    await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
                                 except Exception:
                                     pass
                             await app.read_chat_history(bot)
                         else:
-                            xxx_teletips += f"\n\n🤖  **@{bot}**\n └ **Online** ✅"
+                            xxx_teletips += f"\n\n╭⎋ **[{BOT_NAME}](https://t.me/{bot}?start=true)**\n╰⊚ **Online** ✅"
                             await app.read_chat_history(bot)
                     except FloodWait as e:
                         await asyncio.sleep(e.x)            
