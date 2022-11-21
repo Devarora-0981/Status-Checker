@@ -39,7 +39,7 @@ async def main_teletips():
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n╭⎋  **app.get_chat(bot, limit = 1)**\n╰⊚ **Offline** ❌"
+                            xxx_teletips += f"\n\n╭⎋  **message.from_user.first_name(bot, limit = 1)**\n╰⊚ **Offline** ❌"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
                                     await app.send_message(int(GRP_ID), f"🚨 **Beep! Beep!! @{bot} is down** ❌")
