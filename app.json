@@ -27,6 +27,10 @@
             "description": "Your bot username list without '@' (Example: teletips1bot teletips2bot teletips3bot)",
             "required": true
         },
+       "BOT_NAME": {
+            "description": "Your Tg Bot's Name."
+            "required": true
+       },
        "CHANNEL_OR_GROUP_ID": {
             "description": "Your channel's or group's Telegram id (Example: -1001246808642)",
             "required": true
