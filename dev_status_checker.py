@@ -34,7 +34,7 @@ async def main_devchecker():
                     try:
                         bot_info = await app.get_users(int(bot))
                     except Exception:
-                        mention = bot
+                        bot_info = bot
 
                     try:
                         yyy_teletips = await app.send_message(int(bot), "/start")
