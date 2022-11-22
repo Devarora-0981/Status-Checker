@@ -1,11 +1,13 @@
 #Copyright ©️ 2022 Dev Arora. All Rights Reserved.
+import os
+import re
+import pytz
+import asyncio
+import datetime
 
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait
-import asyncio
-import datetime
-import pytz
-import os
+
 
 app = Client(
     name = "devbotz",
@@ -28,26 +30,32 @@ async def main_devchecker():
                 print("Checking...")
                 xxx_teletips = f"<u>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴅᴇᴠ ʙᴏᴛs' ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</u>\n\n 📈 | <u>**ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs 🍂**</u>"
                 for bot in BOT_LIST:
+                    await asyncio.sleep(7)
                     try:
-                        yyy_teletips = await app.send_message(bot, "/start")
+                        bot_info = await app.get_users(int(bot))
+                    except Exception:
+                        mention = bot
+
+                    try:
+                        yyy_teletips = await app.send_message(int(bot), "/start")
                         aaa = yyy_teletips.id
                         await asyncio.sleep(15)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
                         async for ccc in zzz_teletips:
                             bbb = ccc.id
                         if aaa == bbb:
-                            xxx_teletips += f"\n\n╭⎋ **@{bot}**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
+                            xxx_teletips += f"\n\n╭⎋ **[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏғғʟɪɴᴇ ❄**"
                             for bot_admin_id in BOT_ADMIN_IDS:
                                 try:
-                                    await app.send_message(int(GRP_ID), f"**ʙsᴅᴋ ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡.\n@{bot} ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
-                                except Exception:
-                                    pass
+                                    await app.send_message(int(GRP_ID), f"**ʙsᴅᴋ ᴋʏᴀ ᴋᴀʀ ʀᴀʜᴀ ʜᴀɪ 😡.\n[{bot_info.first_name}](tg://user?id={bot_info.id}) ᴏғғ ʜᴀɪ. ᴀᴄᴄʜᴀ ʜᴜᴀ ᴅᴇᴋʜ ʟɪʏᴀ ᴍᴀɪɴᴇ.**")
+                                except Exception:...
                             await app.read_chat_history(bot)
                         else:
-                            xxx_teletips += f"\n\n╭⎋ **@{bot}**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
+                            xxx_teletips += f"\n\n╭⎋ **@[{bot_info.first_name}](tg://user?id={bot_info.id})**\n╰⊚ **sᴛᴀᴛᴜs: ᴏɴʟɪɴᴇ ✨**"
                             await app.read_chat_history(bot)
                     except FloodWait as e:
-                        await asyncio.sleep(e.x)            
+                        ttm = re.findall("\d{0,5}", str(e))
+                        await asyncio.sleep(int(ttm))
                 time = datetime.datetime.now(pytz.timezone(f"{TIME_ZONE}"))
                 last_update = time.strftime(f"%d %b %Y at %I:%M %p")
                 xxx_teletips += f"\n\n✔️ <u>ʟᴀsᴛ ᴄʜᴇᴄᴋᴇᴅ ᴏɴ:</u>\n**ᴅᴀᴛᴇ & ᴛɪᴍᴇ: {last_update}**\n**ᴛɪᴍᴇ ᴢᴏɴᴇ: ({TIME_ZONE})**\n\n<i><u>♻️ ʀᴇғʀᴇsʜᴇs ᴀᴜᴛᴏᴍᴀᴛɪᴄᴀʟʟʏ ᴡɪᴛʜɪɴ 10 ᴍɪɴᴜᴛᴇs.</u></i>"
