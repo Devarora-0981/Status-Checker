@@ -20,7 +20,6 @@ BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
 CHANNEL_OR_GROUP_ID = int(os.environ["CHANNEL_OR_GROUP_ID"])
 MESSAGE_ID = int(os.environ["MESSAGE_ID"])
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
-BOT_NAME = [i.strip() for i in os.environ.get("BOT_NAME").split(' ')]
 GRP_ID = os.environ.get("GRP_ID", "-1001437960289")
 
 
