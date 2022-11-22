@@ -32,12 +32,12 @@ async def main_devchecker():
                 for bot in BOT_LIST:
                     await asyncio.sleep(7)
                     try:
-                        bot_info = await app.get_users(int(bot))
+                        bot_info = await app.get_users(bot)
                     except Exception:
                         bot_info = bot
 
                     try:
-                        yyy_teletips = await app.send_message(int(bot), "/start")
+                        yyy_teletips = await app.send_message(bot, "/start")
                         aaa = yyy_teletips.id
                         await asyncio.sleep(15)
                         zzz_teletips = app.get_chat_history(bot, limit = 1)
