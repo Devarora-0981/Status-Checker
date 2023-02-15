@@ -49,6 +49,7 @@
         },
         "BOT_ADMIN_IDS": {
             "description": "Bot admin(s) id(s) (Example: 1357907531 2468097531 3579864213)"
+            "required": true
         },
         "TIME_ZONE": {
             "description": "Your time zone (Example: Asia/Kolkata)",
@@ -58,7 +59,7 @@
     "formation": {
     "worker": {
       "quantity": 1,
-      "size": "free"
+      "size": "eco"
     }
   },
     "buildpacks": [
