@@ -27,10 +27,14 @@
             "description": "Your bot username list without '@' (Example: teletips1bot teletips2bot teletips3bot)",
             "required": true
         },
-       "CHANNEL_OR_GROUP_ID": {
+       "CHANNEL_ID": {
             "description": "Your channel's or group's Telegram id (Example: -1001246808642)",
             "required": true
         },
+       "GRP_ID":{
+            "description": "Your Group Id To Send Warnings.",
+            "required": true
+       },
        "MESSAGE_ID": {
             "description": "Telegram id of message from your channel or group (Example: 10)",
             "required": true
