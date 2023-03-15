@@ -39,11 +39,6 @@
             "description": "Telegram id of message from your channel or group (Example: 10)",
             "required": true
         },
-        "CHANNEL_NAME":{
-            "description": "Your Channel Name.",
-            "required": true,
-            "value": "@DevBotz"
-        },
         "BOT_ADMIN_IDS": {
             "description": "Bot admin(s) id(s) (Example: 1357907531 2468097531 3579864213)"
         },
