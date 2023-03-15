@@ -18,17 +18,17 @@ app = Client(
 
 TIME_ZONE = os.environ["TIME_ZONE"]
 BOT_LIST = [i.strip() for i in os.environ.get("BOT_LIST").split(' ')]
-CHANNEL_ID = int(os.environ["CHANNEL_ID"])  #CHANNEL_ID is for the group/channel where the checker will update the status of bots.
+CHANNEL_ID = int(os.environ["CHANNEL_ID"])
 MESSAGE_ID = int(os.environ["MESSAGE_ID"])
 BOT_ADMIN_IDS = [int(i.strip()) for i in os.environ.get("BOT_ADMIN_IDS").split(' ')]
-GRP_ID = os.environ.get("GRP_ID")  #GRP_ID is for logs group where the checker will send warnings of offline bots.
+GRP_ID = os.environ.get("GRP_ID")
 CHANNEL_NAME = os.environ.get("CHANNEL_NAME", "@DevBotz")
 
 async def main_devchecker():
     async with app:
             while True:
                 print("Checking...")
-                xxx_teletips = f"<u>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {CHANNEL_NAME} ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</u>\n\n 📈 | <u>**ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs 🍂**</u>"
+                xxx_teletips = f"<u>**🏷 ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ {(await app.get_chat(CHANNEL_ID)).title} ɪɴғᴏʀᴍᴀᴛɪᴏɴ ᴄʜᴀɴɴᴇʟ**</u>\n\n 📈 | <u>**ʀᴇᴀʟ ᴛɪᴍᴇ ʙᴏᴛ's sᴛᴀᴛᴜs 🍂**</u>"
                 for bot in BOT_LIST:
                     await asyncio.sleep(7)
                     try:
